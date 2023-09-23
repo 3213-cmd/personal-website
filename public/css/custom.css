@@ -1,0 +1,14 @@
+/* Override this file to customise the theme's CSS for your site */
+
+.mypost {
+    display: flex;
+    align-items: center;
+}
+
+.mytitle {
+    flex: 1;
+}
+
+.mydate {
+    text-align: left ;
+}

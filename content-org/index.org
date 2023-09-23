@@ -1,0 +1,11 @@
+#+hugo_base_dir: ../
+
+* DONE Index :tag1:@category1:ATTACH:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:ID:       5218ef0f-dddb-4475-aca5-b93fda09470b
+:END:
+This is my Index
+Hello I am Nikolas
+
+[[attachment:_20230922_190117screenshot.png]]
