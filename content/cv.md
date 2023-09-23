@@ -8,15 +8,14 @@ type = "bigpage"
 
 My current resume. German version is available below.
 
-<iframe width="100%" height=1000 src="https://3213-cmd.github.io/personal-website/sibaev-cv.pdf"></iframe>
+<iframe width="100%" height=1000 src="https://3213-cmd.github.io/personal-website/cv/sibaev-cv-english.pdf"></iframe>
 
 Hugo makes use of a variety of open source projects including:
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+* [CV English](https://3213-cmd.github.io/personal-website/cv/sibaev-cv-english.pdf)
+* [CV English Long](https://3213-cmd.github.io/personal-website/cv/sibaev-cv-english-long.pdf)
+* [CV German](https://3213-cmd.github.io/personal-website/cv/sibaev-cv-german.pdf)
+* [CV German Long](https://3213-cmd.github.io/personal-website/cv/sibaev-cv-german-long.pdf)
 
 Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
 
