@@ -8,10 +8,7 @@ type = "bigpage"
 
 My current resume. German version is available below.
 
-<iframe width="100%" height=1000 src="./sibaev-cv.pdf"></iframe>
-
-<iframe width="100%" height=1000 src="./public/pdf/sibaev-cv.pdf"></iframe>
-
+<iframe width="100%" height=1000 src="https://3213-cmd.github.io/personal-website/sibaev-cv.pdf"></iframe>
 
 Hugo makes use of a variety of open source projects including:
 
