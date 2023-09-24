@@ -8,7 +8,7 @@ author = "Nikolas Sibaev"
 Hello, I'm Nikolas a junior software engineer from Munich - Germany. 
 This is my personal website build using [Hugo](https://gohugo.io/) and a 
 slightly modified version of the [risotto](https://risotto.joeroe.io/) theme.
-It is hosted on GitHub pages and updated using GitHub Actions.
+It is hosted on GitHub pages and updated using GitHub Actions whenever I push a change.
 
 After finishing my Bachelor's degree in Computer Science at LMU Munich, 
 I realized that there are still many topics for me to explore. 
