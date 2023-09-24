@@ -1,0 +1,410 @@
+%-------------------------
+% Resume in Latex
+% Author : Nikolas Sibaev
+% Using off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+%\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%-------------------------
+%Toggle Languages & Length
+\usepackage{etoolbox}
+\newtoggle{ENGLISH}
+\newtoggle{LONGCV}
+%\toggletrue{ENGLISH}
+%\togglefalse{ENGLISH}
+%\toggletrue{LONGCV}
+
+%-------------------------
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Large \scshape Nikolas Sibaev} \\ \vspace{1pt}
+    \small +49 176 3157 5632 $|$
+    \href{https://sibaev.de}{\underline{sibaev.de}} $|$
+    \href{mailto:nikolas@sibaev.de}{\underline{nikolas@sibaev.de}} $|$
+    \href{https://linkedin.com/in/nikolas-sibaev}{\underline{linkedin.com/in/nikolas-sibaev}} $|$
+    \href{https://github.com/3213-cmd/}{\underline{github.com/3213-cmd/}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+%START
+\iftoggle{ENGLISH}
+{
+\section{Education}
+\resumeSubHeadingListStart
+}
+{
+\section{Ausbildung}
+\resumeSubHeadingListStart
+}
+\iftoggle{ENGLISH}
+{
+  \resumeSubheading
+  {Ludwig Maximilian University of Munich}{Munich, Germany}
+  {Bachelor of Science in Computer Science, Minor in Philosophy}{April 2017 -- December 2022}
+    %\resumeSubheading
+     % {Blinn College}{Bryan, TX}
+      %{Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
+}
+{
+  \resumeSubheading
+  {Ludwig-Maximilians-Universität-München}{München, Deutschland}
+  {Bachelor of Science in Informatik mit Nebenfach Philosophie}{April 2017 -- Dezember 2022}
+}
+
+%END
+\resumeSubHeadingListEnd
+%-----------EXPERIENCE-----------
+%START
+\iftoggle{ENGLISH}
+{
+\section{Experience}
+\resumeSubHeadingListStart
+}
+{
+\section{Erfahrung}
+\resumeSubHeadingListStart
+}
+\iftoggle{ENGLISH}
+  {
+    \resumeSubheading
+      {Junior Cloud DevOps Engineer}{October 2023 -- Present}
+      {Eviden}{Munich, Germany}
+      \resumeItemListStart
+        \resumeItem{Developed a on Microsoft Azure hosted WebApp using the C\# Blazor Framework}
+        \resumeItem{Assisting a customer with the building of a CI/CD pipeline using GitHub Actions and Azure DevOps}
+        \resumeItem{Wrote Bash and Python scripts for different one-off tasks}
+        \resumeItem{Learning the foundations of various Cloud and DevOps related technologies}
+        \resumeItemListEnd
+      }
+      {
+        \resumeSubheading
+      {Junior Cloud DevOps Engineer}{Oktober 2023 -- Heute}
+      {Eviden}{München, Deutschland}
+      \resumeItemListStart
+        \resumeItem{Entwickeln einer auf Microsoft Azure gehosteten WebApp mittels des C\# Blazor Frameworks}
+        \resumeItem{Unterstützung eines Kunden beim Aufbau einer CI/CD Pipeline mittels GitHUb Actions und Azure DevOps}
+        \resumeItem{Schreiben von Bash und Python Skripten für diverse einmalige Aufgaben}
+        \resumeItem{Erlernen von Grundlagen in unterschiedlichen Cloud und DevOps bezogenen Technologien}
+        \resumeItemListEnd
+      }
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \iftoggle{ENGLISH}
+      {
+    \resumeSubheading
+      {Intern Product Management}{August 2020 -- March 2022}
+      {Amazon Fresh}{Munich, Germany}
+      \resumeItemListStart
+        \resumeItem{Supported set-up of new pricing mechanisms}
+        \resumeItem{Prototyped projects for automated data processing}
+        \resumeItem{Owned weekly SQL and data analytics office hours}
+        \resumeItem{Ran demo sessions with international senior stakeholders}
+        \resumeItem{Development of internationaly used reports on customer insights}
+    \resumeItemListEnd
+  }
+  {
+
+    \resumeSubheading
+      {Werkstudent Produkt Management}{August 2020 -- März 2022}
+      {Amazon Fresh}{München, Deutschland}
+      \resumeItemListStart
+        \resumeItem{Unerstützung beim Aufsetzen neuer Pricing Mechanismen}
+        \resumeItem{Entwicklung mehrer Prototypen zur automatischen Datenverarbeitung}
+        \resumeItem{Halten einer wöchentlichen SQL und Data-Analytics Sprechstunde}
+        \resumeItem{Halten von Demo-Sitzungen mit internationalen Senior Stakeholdern}
+        \resumeItem{Entwickeln international genutzter Berichte über die Kunden Einblicke}
+    \resumeItemListEnd
+  }
+
+\iftoggle{ENGLISH}
+      {
+    \resumeSubheading
+      {Technical Support}{April 2020 -- July 2020}
+      {Bayrische TelemedAllianz}{Baar-Ebenhausen, Germany}
+      \resumeItemListStart
+        \resumeItem{Technical support for the telecommunications platform \emph{Doccura}}
+        \resumeItem{Testing and planning of new features}
+        \resumeItem{Integrating the ticketing platform \emph{Freshdesk} as well as traing employees on its usage}
+        \resumeItem{Creating the documentation and FAQ}
+      \resumeItemListEnd
+}
+{
+    \resumeSubheading
+      {Technischer Support}{April 2020 -- July 2020}
+      {Bayrische TelemedAllianz}{Baar-Ebenhausen, Deutschland}
+      \resumeItemListStart
+        \resumeItem{Technischer Support für die Telekommunikationsplattform \emph{Doccura}}
+        \resumeItem{Testen und mitbestimmen von neuen Features}
+        \resumeItem{Integrierung der Ticketingplattform \emph{Freshdesk} sowie Einarbeitung der Mitarbeiter}
+        \resumeItem{Erstellen von Dokumentation und FAQ}
+      \resumeItemListEnd
+
+    }
+%LONGCV START
+\iftoggle{LONGCV}{
+\iftoggle{ENGLISH}
+      {
+    \resumeSubheading
+      {Intern Marketing}{September 2018 -- March 2020}
+      {Verlag C.H. Beck oHG}{Munich, Germany}
+      \resumeItemListStart
+        \resumeItem{Creation of advertisments using Adobe Photoshop and InDesign}
+        \resumeItem{Proofreading and correctional work}
+        \resumeItem{Maintenance of online content}
+        \resumeItem{Automation of manual advertisment creation steps}
+      \resumeItemListEnd
+}
+{
+    \resumeSubheading
+      {Werkstudent Marketing}{September 2018 -- März 2020}
+      {Verlag C.H. Beck oHG}{München, Deutschland}
+      \resumeItemListStart
+        \resumeItem{Erstellen von Werbeanzeigen mittels Adobe Photoshop und InDesign}
+        \resumeItem{Korrekturlesen und Berichtigungsarbeit}
+        \resumeItem{Wartung von Online Content}
+        \resumeItem{Automatisierung manueller Werbeanfertigungsschritte}
+      \resumeItemListEnd
+
+    }
+
+%LONCV END
+  }
+
+%END
+\resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+
+\iftoggle{ENGLISH}
+{
+\section{Projects}
+    \resumeSubHeadingListStart
+}
+{
+\section{Projekte}
+    \resumeSubHeadingListStart
+}
+\iftoggle{ENGLISH}
+{
+\resumeProjectHeading
+          {\textbf{Mailman} $|$ \emph{Clojure, Clojurescript, GraphQL, PostgreSQL, Docker}}{July 2023 -- Present}
+          \resumeItemListStart
+            \resumeItem{Private ongoing project with the goal to create a full-stack app for faciliating movement of email providers}
+            \resumeItem{Frontend is written in Clojurescript and uses Material-UI components with Reagent}
+            \resumeItem{Backend is written in Clojure and utilizies several libraries such as NextJDBC, Honeysql and Lacinia}
+            \resumeItem{Features GraphQL API}
+            \resumeItem{Goal is to have a project which can be easily deployed locally using Docker compose}
+            \resumeItem{Project is used as an exercise to build practical experience with Clojure}
+          \resumeItemListEnd
+}
+{
+\resumeProjectHeading
+          {\textbf{Mailman} $|$ \emph{Clojure, Clojurescript, GraphQL, PostgreSQL, Docker}}{Juli 2023 -- Heute}
+          \resumeItemListStart
+            \resumeItem{Privates Projekt mit dem Ziel eine Fullstack App bereitzustellen, die den Wechsel von Mail Providern erleichert}
+            \resumeItem{Frontend ist in Clojurescript geschrieben und nutzt Reagent zusammen mit Material-Ui Komponenten}
+            \resumeItem{Backend ist in Clojure geschrieben und nutzt divesrse Bibliotheken wie z.B: NextJDBC, HoneySQL und Lacinia}
+            \resumeItem{Beinhaltet eine GraphQL API}
+            \resumeItem{Projekt soll lokal einfach mittels Docker compose zum Laufen gebracht werden}
+            \resumeItem{Projekt dient primär dazu praktische Erfahrung in Clojure aufzubauen}
+          \resumeItemListEnd
+}
+\iftoggle{ENGLISH}
+{
+\resumeProjectHeading
+          {\textbf{Certmand} $|$ \emph{Python, VMware, Linux, PKI, SQLite, SQLAlchemy, REST-API, Swagger-Ui}}{Oktober 2021 -- Dezember 2022}
+          \resumeItemListStart
+            \resumeItem{Worked in a group of three as part of our bachelor thesis}
+            \resumeItem{Developed a an automatic certificate management system for VMware based environments}
+            \resumeItem{Service that automatically renewed expiring certificates}
+            \resumeItem{Used a plugin based system to support different kinds of components}
+            \resumeItem{Environment was build from ground up including the network components such as the DNS or Proxy}
+          \resumeItemListEnd
+}
+{
+\resumeProjectHeading
+          {\textbf{Certmand} $|$ \emph{Python, VMware, Linux, PKI, SQLite, SQLAlchemy, REST-API, Swagger-Ui}}{Oktober 2021 -- Dezember 2022}
+          \resumeItemListStart
+            \resumeItem{Gruppenarbeit mit zwei Kommilitionen im Rahmen unserer Bachelorarbeiten}
+            \resumeItem{Entwickeln eines automatischen Zertifikatsmanagementsystems für VMware basierte Umgebungen}
+            \resumeItem{Service der automatisch ablaufende Zertifikate erneuert}
+            \resumeItem{Plugin Architektur um unterschiedliche Arten von Komponenten zu unerstützen}
+            \resumeItem{Umgebung war von grundauf selbst aufgebaut einschließlich der Netzwerkkomponenten wie DNS und Proxy}
+          \resumeItemListEnd
+        }
+%LONGCV START
+        \iftoggle{LONGCV}
+        {
+          \iftoggle{ENGLISH}
+          {
+\resumeProjectHeading
+          {\textbf{Bashni Client} $|$ \emph{C, TCP, IP, ClientServer, Pipes, Sockets, Makefile}}{October 2020 -- February 2021}
+          \resumeItemListStart
+            \resumeItem{Group project as part of a practical course on operating systems during my studies}
+            \resumeItem{Developed a client for the board game Bashni which communicated with a provided server}
+            \resumeItem{Learned to use system-level programming concepts}
+            \resumeItem{Included custom AI that was later trialed against the AIs of other student groups}
+          \resumeItemListEnd
+          }
+          {
+\resumeProjectHeading
+          {\textbf{Bashni Client} $|$ \emph{C, TCP, IP, ClientServer, Pipes, Sockets, Makefile}}{Oktober 2020 -- Februar 2021}
+          \resumeItemListStart
+            \resumeItem{Gruppenprojekt in Rahmen des Systempraktikums während des Studiums}
+            \resumeItem{Entwickeln eines Clients für das Brettspiel Bashni}
+            \resumeItem{Erlernen von Konzepten der systemnahen Programmierung}
+            \resumeItem{Beeinhaltete eigensentwicklete KI welche späteter gegen die KIs anderer Studentengruppen antrat}
+          \resumeItemListEnd
+          }
+
+
+%LONGCVEND
+}
+
+
+
+%END
+\resumeSubHeadingListEnd
+%-----------PROGRAMMING SKILLS-----------
+\iftoggle{ENGLISH}
+{
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, SQL, Clojure, Clojurescript, C, Java, HTML/CSS} \\
+     \textbf{Frameworks}{: Blazor, SQLAlchemy, Reagent, Tornado, Material-UI, FastAPI} \\
+     \textbf{Developer Tools}{: Git, Docker, Azure, AWS, EMACS, PyCharm, GitHub Actions, Terraform, Postman} \\
+     \textbf{Libraries}{: SQLAlchemy, Magit, Lacinia, HoneySQL}
+    }}
+ \end{itemize}
+}
+{
+\section{Technische Fähigkeiten}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Sprachen}{: Python, SQL, Clojure, Clojurescript, C, Java, HTML/CSS} \\
+     \textbf{Frameworks}{: Blazor, SQLAlchemy, Reagent, Tornado, Material-UI, FastAPI} \\
+     \textbf{Entwickler Werkzeuge}{: Git, Docker, Azure, AWS, EMACS, PyCharm, GitHub Actions, Terraform, Postman} \\
+     \textbf{Bibliotheken}{: SQLAlchemy, Magit, Lacinia, HoneySQL}
+    }}
+ \end{itemize}
+}
+
+
+%-------------------------------------------
+\end{document}
