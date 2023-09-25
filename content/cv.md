@@ -7,8 +7,6 @@ type = "bigpage"
 +++
 
 My current resume, available both in German and English. The long english version is embedded below.
-The CV is based on [Jakes's Resume](https://github.com/jakegut/resume) with a few personal tweaks. 
-A makefile is used to manually compile all four versions of the CV.  
 
 * [CV English](https://sibaev.de/cv/sibaev-cv-english.pdf)
 * [CV English Long](https://sibaev.de/cv/sibaev-cv-english-long.pdf)

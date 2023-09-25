@@ -1,138 +1,40 @@
 #+hugo_base_dir: ../
 
-* DONE My first post :tag1:@category1:
+* DONE My first post :Misc:@Misc:ATTACH:
 :PROPERTIES:
-:EXPORT_FILE_NAME: my-first-post
+:EXPORT_FILE_NAME: My First Post.
+:ID:       45bea2e8-f32c-4f8f-ae7f-7b9bf212aa64
+:EXPORT_AUTHOR:  Nikolas Sibaev
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description "Trial run."
 :END:
-This is my post body
+#+date: 2023-09-25
+#+hugo_auto_set_lastmod: t
 
+** Heading.
+Just a quick-test to see if everything is working. Written using *org-mode* and exported with /ox-hugo/.
+*** Centered Image
+#+begin_center
+#+ATTR_HTML: :width 300px
+[[attachment:_20230925_233053screenshot.png]]
 
-* DONE My second post :tag1:@category1:ATTACH:
-:PROPERTIES:
-:EXPORT_FILE_NAME: my-second-post
-:ID:       3f519e71-e9b4-49b4-9f9f-d69731d6a765
-:END:
-#+date: 2017-07-24
-This is mmy post my post my post my post my post my post my post my post my post my post my post my post my post my post my post my post my post my post my post my post my post my post my post my post y post body
+#+end_center
+*** Table
 
-    [[attachment:_20230922_161857screenshot.png]]
+#+begin_center
 
-#+BEGIN_SRC python
-import pygame
-import math
-import colorsys
++----------+----------+----------+
+|A         |B         |C         |
++----------+----------+----------+
+|One       |Two       |Three     |
++----------+----------+----------+
+|1         |2         |3         |
++----------+----------+----------+
 
-pygame.init()
-
-white = (255, 255, 255)
-black = (0, 0, 0)
-hue = 0
-
-WIDTH = 1920
-HEIGHT = 1080
-
-x_start, y_start = 0, 0
-
-x_separator = 10
-y_separator = 20
-
-rows = HEIGHT // y_separator
-columns = WIDTH // x_separator
-screen_size = rows * columns
-
-x_offset = columns / 2
-y_offset = rows / 2
-
-A, B = 0, 0  # rotating animation
-
-theta_spacing = 10
-phi_spacing = 1 # for faster rotation change to 2, 3 or more, but first change 86, 87 lines as commented
-
-chars = ".,-~:;=!*#$@"  # luminance index
-
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
-
-display_surface = pygame.display.set_mode((WIDTH, HEIGHT))
-# display_surface = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
-pygame.display.set_caption('Donut')
-font = pygame.font.SysFont('Arial', 18, bold=True)
-
-def hsv2rgb(h, s, v):
-    return tuple(round(i * 255) for i in colorsys.hsv_to_rgb(h, s, v))
-
-
-def text_display(letter, x_start, y_start):
-    text = font.render(str(letter), True, hsv2rgb(hue, 1, 1))
-    display_surface.blit(text, (x_start, y_start))
-
-# def text_display(letter, x_start, y_start):
-#     text = font.render(str(letter), True, white)
-#     display_surface.blit(text, (x_start, y_start))
-
-
-run = True
-while run:
-
-    screen.fill((black))
-
-    z = [0] * screen_size  # Donut. Fills donut space
-    b = [' '] * screen_size  # Background. Fills empty space
-
-    for j in range(0, 628, theta_spacing):  # from 0 to 2pi
-        for i in range(0, 628, phi_spacing):  # from 0 to 2pi
-            c = math.sin(i)
-            d = math.cos(j)
-            e = math.sin(A)
-            f = math.sin(j)
-            g = math.cos(A)
-            h = d + 2
-            D = 1 / (c * h * e + f * g + 5)
-            l = math.cos(i)
-            m = math.cos(B)
-            n = math.sin(B)
-            t = c * h * g - f * e
-            x = int(x_offset + 40 * D * (l * h * m - t * n))  # 3D x coordinate after rotation
-            y = int(y_offset + 20 * D * (l * h * n + t * m))  # 3D y coordinate after rotation
-            o = int(x + columns * y)
-            N = int(8 * ((f * e - c * d * g) * m - c * d * e - f * g - l * d * n))  # luminance index
-            if rows > y and y > 0 and x > 0 and columns > x and D > z[o]:
-                z[o] = D
-                b[o] = chars[N if N > 0 else 0]
-
-    if y_start == rows * y_separator - y_separator:
-        y_start = 0
-
-    for i in range(len(b)):
-        A += 0.00004  # for faster rotation change to bigger value
-        B += 0.00002  # for faster rotation change to bigger value
-        if i == 0 or i % columns:
-            text_display(b[i], x_start, y_start)
-            x_start += x_separator
-        else:
-            y_start += y_separator
-            x_start = 0
-            text_display(b[i], x_start, y_start)
-            x_start += x_separator
-
-
-    pygame.display.update()
-
-    hue += 0.005
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:
-                run = Falseuser=> (def object "light")
-#'user/object
-
-user=> (println (str "God said let there be " object))
-God said let there be light
-Vnil
+#+end_center
+*** Code
+#+BEGIN_SRC clojure
+(defn hello-world []
+  (println "Hello World!"))
 #+END_SRC
-
-| A       | B      | Hello    | C       | D        |
-|---------+--------+----------+---------+----------|
-| Two     | sakjdl | askdjlka | akjsldj | aksjdlaj |
-| aksjldk | asd    |          | kkkk    | djinn    |
+*** Link
+My resume is located at [[/cv][CV]]
